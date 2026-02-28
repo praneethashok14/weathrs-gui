@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeathRS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Save key modal -->
+    <div id="keyModal" class="key-modal">
+        <div class="key-modal-card">
+            <div class="key-modal-title">WeathRS</div>
+
+            <div id="keyFormSection">
+                <p class="key-modal-sub">Enter your 6-digit save key to load your cities</p>
+                <input id="keyInput" type="text" inputmode="numeric" maxlength="6" placeholder="000000" class="key-input" />
+                <button id="loadKeyBtn" class="key-btn-primary">Load my cities</button>
+                <div class="key-modal-divider">or</div>
+                <button id="generateKeyBtn" class="key-btn-secondary">Generate a new save key</button>
+            </div>
+
+            <div id="keyNewSection" style="display:none">
+                <p class="key-modal-sub">Your new save key is:</p>
+                <div class="key-badge" id="newKeyBadge"></div>
+                <p class="key-modal-warning">Write this down — you'll need it to access your cities next time.</p>
+                <button id="continueBtn" class="key-btn-primary">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main app -->
+    <div class="container">
+        <div class="sidebar">
+            <div class="header">WeathRS</div>
+
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search location" />
+            </div>
+
+            <button class="add-btn" id="addCurrentCityBtn" style="display: none;">
+                <span>⭐</span> Add Current City
+            </button>
+
+            <div class="cities-list" id="citiesList">
+                <div class="empty-state">No cities added yet.<br>Search and add your first city!</div>
+            </div>
+
+            <div class="key-indicator">
+                <span class="key-indicator-label">Save Key</span>
+                <span class="key-indicator-value" id="keyIndicatorValue">------</span>
+                <button class="key-change-btn" id="changeKeyBtn">change</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="clouds-container" id="cloudsContainer">
+                <div class="cloud" style="left: 5%; top: 10%;">☁️</div>
+                <div class="cloud" style="left: 25%; top: 30%;">☁️</div>
+                <div class="cloud" style="left: 50%; top: 5%;">☁️</div>
+                <div class="cloud" style="left: 70%; top: 25%;">☁️</div>
+                <div class="cloud" style="left: 85%; top: 15%;">☁️</div>
+            </div>
+
+            <div id="mainWeather">
+                <div class="city-name" id="cityName">Search for a city</div>
+                <div class="current-temp" id="currentTemp">-°C</div>
+                <div class="condition-name" id="conditionName">-</div>
+                <div class="feels-like" id="feelsLike">to see weather</div>
+
+                <div class="weather-details">
+                    <div class="detail-row">
+                        <span class="detail-icon">💧</span>
+                        <span id="humidity">Humidity: -%</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">💨</span>
+                        <span id="wind">Wind: - kph</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <span>Data from WeatherAPI.com</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

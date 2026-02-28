@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #5fa3d8 0%, #a0d2f0 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+}
+
+.sidebar {
+    width: 300px;
+    background: #e5e5e5;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    padding: 10px 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    color: #999;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    background: transparent;
+}
+
+.add-btn {
+    background: #007aff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.add-btn:hover {
+    background: #0051d5;
+}
+
+.cities-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.city-item {
+    background: white;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.city-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.city-item.active {
+    background: #007aff;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+}
+
+.city-item-content {
+    flex: 1;
+}
+
+.city-item-name {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.city-item-temp {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px 8px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    line-height: 1;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.main-content {
+    flex: 1;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #5fa3d8, #a0d2f0);
+    transition: background 1s ease;
+}
+
+/* Time-of-day backgrounds */
+.main-content.time-night   { background: linear-gradient(to bottom, #0f0c29, #302b63); }
+.main-content.time-dawn    { background: linear-gradient(to bottom, #ff6b6b, #ffd93d); }
+.main-content.time-morning { background: linear-gradient(to bottom, #89c4e1, #f7e9c3); }
+.main-content.time-day     { background: linear-gradient(135deg, #5fa3d8, #a0d2f0); }
+.main-content.time-evening { background: linear-gradient(to bottom, #f7971e, #fd7272); }
+.main-content.time-dusk    { background: linear-gradient(to bottom, #1a1a2e, #4a4e69); }
+
+/* White text for dark backgrounds */
+.main-content.dark-bg .city-name,
+.main-content.dark-bg .current-temp,
+.main-content.dark-bg .condition-name,
+.main-content.dark-bg .feels-like,
+.main-content.dark-bg .detail-row,
+.main-content.dark-bg .footer { color: rgba(255, 255, 255, 0.9); }
+
+.clouds-container {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 150px;
+    pointer-events: none;
+}
+
+.cloud {
+    position: absolute;
+    opacity: 0.8;
+    font-size: 80px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+#mainWeather {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city-name {
+    font-size: 56px;
+    font-weight: 300;
+    margin-bottom: 8px;
+    letter-spacing: -2px;
+    text-align: center;
+}
+
+.current-temp {
+    font-size: 72px;
+    font-weight: 200;
+    margin-bottom: 8px;
+}
+
+.condition-name {
+    font-size: 28px;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.feels-like {
+    font-size: 20px;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 32px;
+}
+
+.weather-details {
+    display: flex;
+    gap: 32px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #444;
+}
+
+.detail-icon {
+    font-size: 22px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    font-size: 12px;
+    color: #999;
+}
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    padding: 32px 16px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ===== Key indicator (sidebar bottom) ===== */
+.key-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: white;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+.key-indicator-label {
+    color: #999;
+    font-weight: 500;
+}
+
+.key-indicator-value {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px;
+    flex: 1;
+}
+
+.key-change-btn {
+    background: none;
+    border: none;
+    color: #007aff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.key-change-btn:hover {
+    text-decoration: underline;
+}
+
+/* ===== Save key modal ===== */
+.key-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.key-modal-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+}
+
+.key-modal-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+.key-modal-sub {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.key-input {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    letter-spacing: 8px;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.key-input:focus {
+    border-color: #007aff;
+}
+
+.key-btn-primary {
+    width: 100%;
+    background: #007aff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.key-btn-primary:hover {
+    background: #0051d5;
+}
+
+.key-btn-secondary {
+    width: 100%;
+    background: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.key-btn-secondary:hover {
+    background: #e0e0e0;
+}
+
+.key-modal-divider {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.key-badge {
+    font-size: 36px;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #007aff;
+    background: #f0f7ff;
+    padding: 16px 24px;
+    border-radius: 10px;
+    border: 2px dashed #007aff;
+}
+
+.key-modal-warning {
+    font-size: 13px;
+    color: #e17055;
+    text-align: center;
+    line-height: 1.5;
+}

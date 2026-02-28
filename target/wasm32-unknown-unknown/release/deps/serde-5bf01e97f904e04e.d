@@ -1,0 +1,14 @@
+/Users/praneeth/Documents/WeathRS-GUI/target/wasm32-unknown-unknown/release/deps/serde-5bf01e97f904e04e.d: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/praneeth/Documents/WeathRS-GUI/target/wasm32-unknown-unknown/release/build/serde-5d37d7fac5181b7b/out/private.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/wasm32-unknown-unknown/release/deps/libserde-5bf01e97f904e04e.rlib: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/praneeth/Documents/WeathRS-GUI/target/wasm32-unknown-unknown/release/build/serde-5d37d7fac5181b7b/out/private.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/wasm32-unknown-unknown/release/deps/libserde-5bf01e97f904e04e.rmeta: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/praneeth/Documents/WeathRS-GUI/target/wasm32-unknown-unknown/release/build/serde-5d37d7fac5181b7b/out/private.rs
+
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/Users/praneeth/Documents/WeathRS-GUI/target/wasm32-unknown-unknown/release/build/serde-5d37d7fac5181b7b/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/praneeth/Documents/WeathRS-GUI/target/wasm32-unknown-unknown/release/build/serde-5d37d7fac5181b7b/out
