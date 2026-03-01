@@ -1,17 +1,5 @@
-/Users/praneeth/Documents/WeathRS-GUI/target/release/deps/weathrs_gui-3b29382e75a8c888.d: src-tauri/src/main.rs /Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/b12586f72eba3ad13d7c46b9ec62f919926c1e123f84d77eca93ba5be81b6460 /Users/praneeth/Documents/WeathRS-GUI/src-tauri/../static/index.html /Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/tauri-codegen-assets/af7f5bf735c5417533ad1eeb111c082414125143e216dc5f4865607f9089628e.html /Users/praneeth/Documents/WeathRS-GUI/src-tauri/../static/style.css /Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/tauri-codegen-assets/b5512246fc69cbf672a86e0b73da0c647fe9e1fd489b103ad14d87734fed6604.css /Users/praneeth/Documents/WeathRS-GUI/src-tauri/../static/app.js /Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/tauri-codegen-assets/aee018002009d6f2e230517f302d9e29e4a6bfd87b0253b1a318444e00f8bd09.js
+/Users/praneeth/Documents/WeathRS-GUI/target/release/deps/weathrs_gui-3b29382e75a8c888.d: src-tauri/src/main.rs
 
-/Users/praneeth/Documents/WeathRS-GUI/target/release/deps/weathrs_gui-3b29382e75a8c888: src-tauri/src/main.rs /Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/b12586f72eba3ad13d7c46b9ec62f919926c1e123f84d77eca93ba5be81b6460 /Users/praneeth/Documents/WeathRS-GUI/src-tauri/../static/index.html /Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/tauri-codegen-assets/af7f5bf735c5417533ad1eeb111c082414125143e216dc5f4865607f9089628e.html /Users/praneeth/Documents/WeathRS-GUI/src-tauri/../static/style.css /Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/tauri-codegen-assets/b5512246fc69cbf672a86e0b73da0c647fe9e1fd489b103ad14d87734fed6604.css /Users/praneeth/Documents/WeathRS-GUI/src-tauri/../static/app.js /Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/tauri-codegen-assets/aee018002009d6f2e230517f302d9e29e4a6bfd87b0253b1a318444e00f8bd09.js
+/Users/praneeth/Documents/WeathRS-GUI/target/release/deps/weathrs_gui-3b29382e75a8c888: src-tauri/src/main.rs
 
 src-tauri/src/main.rs:
-/Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/b12586f72eba3ad13d7c46b9ec62f919926c1e123f84d77eca93ba5be81b6460:
-/Users/praneeth/Documents/WeathRS-GUI/src-tauri/../static/index.html:
-/Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/tauri-codegen-assets/af7f5bf735c5417533ad1eeb111c082414125143e216dc5f4865607f9089628e.html:
-/Users/praneeth/Documents/WeathRS-GUI/src-tauri/../static/style.css:
-/Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/tauri-codegen-assets/b5512246fc69cbf672a86e0b73da0c647fe9e1fd489b103ad14d87734fed6604.css:
-/Users/praneeth/Documents/WeathRS-GUI/src-tauri/../static/app.js:
-/Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out/tauri-codegen-assets/aee018002009d6f2e230517f302d9e29e4a6bfd87b0253b1a318444e00f8bd09.js:
-
-# env-dep:CARGO_PKG_AUTHORS=
-# env-dep:CARGO_PKG_DESCRIPTION=
-# env-dep:CARGO_PKG_NAME=weathrs-gui
-# env-dep:OUT_DIR=/Users/praneeth/Documents/WeathRS-GUI/target/release/build/weathrs-gui-40f1ff57dc2428b4/out
