@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "WeathRS",
+  "version": "0.1.0",
+  "identifier": "com.weathrs.app",
+  "build": {
+    "frontendDist": "../static"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "WeathRS",
+        "width": 1100,
+        "height": 720,
+        "resizable": true,
+        "minWidth": 500,
+        "minHeight": 400
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": ["icons/icon.png"]
+  }
+}

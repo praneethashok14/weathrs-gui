@@ -19,12 +19,14 @@ body {
 }
 
 .sidebar {
-    width: 300px;
+    width: 280px;
+    flex-shrink: 0;
     background: #e5e5e5;
     padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    overflow: hidden;
 }
 
 .header {
@@ -79,6 +81,7 @@ body {
 .cities-list {
     flex: 1;
     overflow-y: auto;
+    min-height: 0;
 }
 
 .city-item {
@@ -137,7 +140,7 @@ body {
 
 .main-content {
     flex: 1;
-    padding: 48px;
+    padding: clamp(24px, 4vw, 48px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,19 +178,19 @@ body {
 .cloud {
     position: absolute;
     opacity: 0.8;
-    font-size: 80px;
+    font-size: clamp(40px, 6vw, 80px);
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 #mainWeather {
-    margin-top: 120px;
+    margin-top: clamp(80px, 15vh, 120px);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .city-name {
-    font-size: 56px;
+    font-size: clamp(28px, 4vw, 56px);
     font-weight: 300;
     margin-bottom: 8px;
     letter-spacing: -2px;
@@ -195,20 +198,20 @@ body {
 }
 
 .current-temp {
-    font-size: 72px;
+    font-size: clamp(48px, 6vw, 72px);
     font-weight: 200;
     margin-bottom: 8px;
 }
 
 .condition-name {
-    font-size: 28px;
+    font-size: clamp(16px, 2.5vw, 28px);
     font-weight: 300;
     color: #555;
     margin-bottom: 16px;
 }
 
 .feels-like {
-    font-size: 20px;
+    font-size: clamp(13px, 1.8vw, 20px);
     font-weight: 300;
     color: #666;
     margin-bottom: 32px;
@@ -216,20 +219,22 @@ body {
 
 .weather-details {
     display: flex;
-    gap: 32px;
+    gap: clamp(16px, 3vw, 32px);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .detail-row {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 18px;
+    font-size: clamp(13px, 1.8vw, 18px);
     font-weight: 300;
     color: #444;
 }
 
 .detail-icon {
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 22px);
 }
 
 .footer {
@@ -248,153 +253,67 @@ body {
     line-height: 1.5;
 }
 
-/* ===== Key indicator (sidebar bottom) ===== */
-.key-indicator {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 12px;
-    background: white;
-    border-radius: 8px;
-    font-size: 13px;
-    margin-top: auto;
+/* ===== Responsive ===== */
+
+@media (max-width: 640px) {
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 16px;
+        gap: 12px;
+        overflow: visible;
+    }
+
+    .header {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .cities-list {
+        flex: none;
+        max-height: 160px;
+        overflow-y: auto;
+    }
+
+    .city-item:hover {
+        transform: none;
+    }
+
+    .main-content {
+        flex: none;
+        min-height: 65vh;
+        padding: 20px 16px;
+        overflow: hidden;
+    }
+
+    .clouds-container {
+        height: 100px;
+    }
+
+    .footer {
+        right: 16px;
+        bottom: 12px;
+    }
 }
 
-.key-indicator-label {
-    color: #999;
-    font-weight: 500;
-}
+@media (max-width: 400px) {
+    .city-name {
+        letter-spacing: -1px;
+    }
 
-.key-indicator-value {
-    font-family: 'Courier New', monospace;
-    font-weight: 700;
-    color: #333;
-    letter-spacing: 2px;
-    flex: 1;
-}
-
-.key-change-btn {
-    background: none;
-    border: none;
-    color: #007aff;
-    font-size: 12px;
-    cursor: pointer;
-    padding: 0;
-}
-
-.key-change-btn:hover {
-    text-decoration: underline;
-}
-
-/* ===== Save key modal ===== */
-.key-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(6px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-}
-
-.key-modal-card {
-    background: white;
-    border-radius: 16px;
-    padding: 40px;
-    width: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
-}
-
-.key-modal-title {
-    font-size: 28px;
-    font-weight: 600;
-    color: #333;
-}
-
-.key-modal-sub {
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-    line-height: 1.5;
-}
-
-.key-input {
-    width: 100%;
-    text-align: center;
-    font-size: 28px;
-    font-family: 'Courier New', monospace;
-    font-weight: 700;
-    letter-spacing: 8px;
-    padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-.key-input:focus {
-    border-color: #007aff;
-}
-
-.key-btn-primary {
-    width: 100%;
-    background: #007aff;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.key-btn-primary:hover {
-    background: #0051d5;
-}
-
-.key-btn-secondary {
-    width: 100%;
-    background: #f0f0f0;
-    color: #333;
-    border: none;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.key-btn-secondary:hover {
-    background: #e0e0e0;
-}
-
-.key-modal-divider {
-    font-size: 13px;
-    color: #aaa;
-}
-
-.key-badge {
-    font-size: 36px;
-    font-family: 'Courier New', monospace;
-    font-weight: 700;
-    letter-spacing: 8px;
-    color: #007aff;
-    background: #f0f7ff;
-    padding: 16px 24px;
-    border-radius: 10px;
-    border: 2px dashed #007aff;
-}
-
-.key-modal-warning {
-    font-size: 13px;
-    color: #e17055;
-    text-align: center;
-    line-height: 1.5;
+    .weather-details {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
 }

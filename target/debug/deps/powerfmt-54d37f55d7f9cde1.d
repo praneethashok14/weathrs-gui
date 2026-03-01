@@ -1,0 +1,11 @@
+/Users/praneeth/Documents/WeathRS-GUI/target/debug/deps/powerfmt-54d37f55d7f9cde1.d: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/buf.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/ext.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/smart_display.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/smart_display_impls.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/debug/deps/libpowerfmt-54d37f55d7f9cde1.rlib: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/buf.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/ext.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/smart_display.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/smart_display_impls.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/debug/deps/libpowerfmt-54d37f55d7f9cde1.rmeta: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/buf.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/ext.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/smart_display.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/smart_display_impls.rs
+
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/lib.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/buf.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/ext.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/smart_display.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/powerfmt-0.2.0/src/smart_display_impls.rs:

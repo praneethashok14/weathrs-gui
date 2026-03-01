@@ -1,4 +1,5 @@
-let saveKey = null;
+const { invoke } = window.__TAURI__.core;
+
 let cities = [];
 let currentCity = null;
 let currentSearchedLocation = null;
@@ -28,44 +29,11 @@ function getWeatherIcon(condition) {
     return '☁️';
 }
 
-// ============ Save key ============
+// ============ Cities (Tauri-backed) ============
 
-function initKey() {
-    const stored = localStorage.getItem('weatherrs_key');
-    if (stored && /^\d{6}$/.test(stored)) {
-        setKey(stored);
-    } else {
-        showModal();
-    }
-}
-
-function setKey(key) {
-    saveKey = key;
-    localStorage.setItem('weatherrs_key', key);
-    document.getElementById('keyIndicatorValue').textContent = key;
-    hideModal();
-    loadCitiesFromServer();
-}
-
-function showModal() {
-    document.getElementById('keyModal').style.display = 'flex';
-    document.getElementById('keyFormSection').style.display = 'block';
-    document.getElementById('keyNewSection').style.display = 'none';
-    document.getElementById('keyInput').value = '';
-}
-
-function hideModal() {
-    document.getElementById('keyModal').style.display = 'none';
-}
-
-// ============ Cities (server-backed) ============
-
-async function loadCitiesFromServer() {
+async function loadCities() {
     try {
-        const resp = await fetch(`/api/cities?key=${saveKey}`);
-        if (!resp.ok) return;
-        const text = await resp.text();
-        cities = text.split('\n').filter(c => c.trim() !== '');
+        cities = await invoke('load_cities');
         renderCitiesList();
         cities.forEach(city => fetchWeatherForCity(city));
     } catch (e) {
@@ -74,13 +42,8 @@ async function loadCitiesFromServer() {
 }
 
 async function saveCities() {
-    if (!saveKey) return;
     try {
-        await fetch('/api/save-cities', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ key: saveKey, cities: cities.join('\n') })
-        });
+        await invoke('save_cities', { cities });
     } catch (e) {
         console.error('Failed to save cities:', e);
     }
@@ -89,9 +52,9 @@ async function saveCities() {
 // ============ Weather API ============
 
 async function apiCall(location) {
-    const response = await fetch(`/api/weather?q=${encodeURIComponent(location)}`);
-    if (!response.ok) throw new Error('Location not found');
-    return response.json();
+    const data = await invoke('get_weather', { q: location });
+    if (data.error) throw new Error(data.error.message || 'Location not found');
+    return data;
 }
 
 async function fetchWeatherForCity(location) {
@@ -265,63 +228,8 @@ function deleteCity(cityName) {
 
 // ============ Event listeners ============
 
-// Modal: load existing key
-document.getElementById('loadKeyBtn').addEventListener('click', () => {
-    const key = document.getElementById('keyInput').value.trim();
-    if (!/^\d{6}$/.test(key)) {
-        document.getElementById('keyInput').style.borderColor = '#ff5f57';
-        return;
-    }
-    setKey(key);
-});
-
-document.getElementById('keyInput').addEventListener('input', e => {
-    e.target.style.borderColor = '#e0e0e0';
-    e.target.value = e.target.value.replace(/\D/g, '');
-});
-
-document.getElementById('keyInput').addEventListener('keypress', e => {
-    if (e.key === 'Enter') document.getElementById('loadKeyBtn').click();
-});
-
-// Modal: generate new key
-document.getElementById('generateKeyBtn').addEventListener('click', async () => {
-    const btn = document.getElementById('generateKeyBtn');
-    btn.textContent = 'Generating...';
-    btn.disabled = true;
-    try {
-        const resp = await fetch('/api/new-key');
-        const { key } = await resp.json();
-        document.getElementById('newKeyBadge').textContent = key;
-        document.getElementById('keyFormSection').style.display = 'none';
-        document.getElementById('keyNewSection').style.display = 'block';
-        // Store early so Continue just calls setKey
-        document.getElementById('continueBtn').onclick = () => setKey(key);
-    } catch (e) {
-        btn.textContent = 'Generate a new save key';
-        btn.disabled = false;
-    }
-});
-
-// Modal: continue after generating
-document.getElementById('continueBtn').addEventListener('click', () => {});
-
-// Sidebar: change key
-document.getElementById('changeKeyBtn').addEventListener('click', () => {
-    cities = [];
-    citiesWeatherData = {};
-    currentCity = null;
-    currentSearchedLocation = null;
-    saveKey = null;
-    localStorage.removeItem('weatherrs_key');
-    renderCitiesList();
-    showModal();
-});
-
-// Sidebar: add city button
 document.getElementById('addCurrentCityBtn').addEventListener('click', addCurrentCity);
 
-// Search
 const searchInput = document.getElementById('searchInput');
 let searchTimeout;
 
@@ -342,4 +250,4 @@ searchInput.addEventListener('keypress', e => {
 });
 
 // ============ Init ============
-initKey();
+loadCities();

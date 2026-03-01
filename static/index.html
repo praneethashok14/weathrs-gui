@@ -8,28 +8,6 @@
 </head>
 <body>
 
-    <!-- Save key modal -->
-    <div id="keyModal" class="key-modal">
-        <div class="key-modal-card">
-            <div class="key-modal-title">WeathRS</div>
-
-            <div id="keyFormSection">
-                <p class="key-modal-sub">Enter your 6-digit save key to load your cities</p>
-                <input id="keyInput" type="text" inputmode="numeric" maxlength="6" placeholder="000000" class="key-input" />
-                <button id="loadKeyBtn" class="key-btn-primary">Load my cities</button>
-                <div class="key-modal-divider">or</div>
-                <button id="generateKeyBtn" class="key-btn-secondary">Generate a new save key</button>
-            </div>
-
-            <div id="keyNewSection" style="display:none">
-                <p class="key-modal-sub">Your new save key is:</p>
-                <div class="key-badge" id="newKeyBadge"></div>
-                <p class="key-modal-warning">Write this down — you'll need it to access your cities next time.</p>
-                <button id="continueBtn" class="key-btn-primary">Continue</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Main app -->
     <div class="container">
         <div class="sidebar">
@@ -51,11 +29,7 @@
                 <div class="empty-state">No cities added yet.<br>Search and add your first city!</div>
             </div>
 
-            <div class="key-indicator">
-                <span class="key-indicator-label">Save Key</span>
-                <span class="key-indicator-value" id="keyIndicatorValue">------</span>
-                <button class="key-change-btn" id="changeKeyBtn">change</button>
-            </div>
+
         </div>
 
         <div class="main-content">

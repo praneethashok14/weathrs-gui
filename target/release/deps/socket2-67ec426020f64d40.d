@@ -1,0 +1,11 @@
+/Users/praneeth/Documents/WeathRS-GUI/target/release/deps/socket2-67ec426020f64d40.d: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sockaddr.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/socket.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sockref.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sys/unix.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/release/deps/libsocket2-67ec426020f64d40.rlib: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sockaddr.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/socket.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sockref.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sys/unix.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/release/deps/libsocket2-67ec426020f64d40.rmeta: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sockaddr.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/socket.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sockref.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sys/unix.rs
+
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/lib.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sockaddr.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/socket.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sockref.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/socket2-0.5.10/src/sys/unix.rs:
