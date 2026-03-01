@@ -1,67 +1,65 @@
-# WeathRS-GUI
+# WeathRS
 
-Weather app built with Rust + a vanilla JS/HTML/CSS frontend.
+Weather desktop app built with Rust + Tauri and a vanilla JS/HTML/CSS frontend.
+
+## Download
+
+A macOS `.dmg` installer is available in [Releases](../../releases).
 
 ## Project Structure
 
 ```
 weathrs-gui/
-├── Cargo.toml          # Rust dependencies
-├── src/
-│   ├── main.rs         # HTTP server (axum) — serves frontend + proxies WeatherAPI
-│   └── lib.rs          # WebAssembly bindings (wasm32 target only, optional)
-├── static/
-│   ├── index.html      # Frontend HTML
-│   ├── style.css       # Styles
-│   └── app.js          # App logic
-└── cities/             # Created at runtime — one .txt file per save key
+├── Cargo.toml              # Workspace root
+├── src-tauri/
+│   ├── Cargo.toml          # Rust dependencies (tauri, reqwest)
+│   ├── build.rs
+│   ├── tauri.conf.json     # App config (window size, icons, identifier)
+│   ├── capabilities/
+│   │   └── default.json    # IPC permissions
+│   ├── icons/
+│   │   ├── icon.png
+│   │   └── icon.icns
+│   └── src/
+│       └── main.rs         # Tauri commands: get_weather, load_cities, save_cities
+└── static/
+    ├── index.html          # Frontend HTML
+    ├── style.css           # Styles (responsive)
+    └── app.js              # App logic (calls Rust via invoke())
 ```
 
 ## Prerequisites
 
-- **Rust** — install from https://rustup.rs
+- [Rust](https://rustup.rs)
+- [Tauri CLI](https://tauri.app/start/prerequisites/) — `cargo install tauri-cli --version "^2"`
 
-## Run
-
-```bash
-cargo run
-```
-
-Opens at `http://localhost:8000`.
-
-For a production build:
+## Dev
 
 ```bash
-cargo build --release
-./target/release/weathrs-gui
+cargo tauri dev
 ```
 
-Copy `target/release/weathrs-gui` and the `static/` folder to your server.
+## Build
+
+```bash
+cargo tauri build
+```
+
+Produces a native app + installer in `src-tauri/target/release/bundle/`.
 
 ## Features
 
-- Search for any city worldwide
-- Save favourite cities with a 6-digit save key
-- Time-of-day background that reflects local time at the searched city
-- Real-time weather from WeatherAPI (proxied server-side — no CORS issues)
-- Dynamic weather icons based on conditions
-
-## Save Keys
-
-On first visit a modal prompts you to enter an existing 6-digit key or generate a new one. Cities are stored server-side in `cities/<key>.txt`. The key is kept in `localStorage` so returning visitors load automatically.
+- Search any city worldwide
+- Save favourite cities — stored automatically in the OS app data folder
+- Time-of-day background reflecting local time at the searched city
+- Weather data fetched server-side via Rust (API key never exposed to the frontend)
+- Dynamic weather icons and animated clouds based on conditions
+- Responsive layout — works on any screen size
 
 ## API
 
 Uses [WeatherAPI.com](https://www.weatherapi.com/) for weather data.
-API key is configured in `src/main.rs`.
-
-## WASM (optional)
-
-`src/lib.rs` exports WASM bindings (`fetch_weather`, `get_weather_icon`, etc.) for the `wasm32` target. These are not used by the server-based frontend but can be built separately:
-
-```bash
-wasm-pack build --target web
-```
+API key is set in `src-tauri/src/main.rs`.
 
 ## License
 
