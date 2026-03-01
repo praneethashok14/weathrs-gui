@@ -1,0 +1,14 @@
+/Users/praneeth/Documents/WeathRS-GUI/target/i686-linux-android/debug/deps/serde-14e991cb3c6f1949.d: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/praneeth/Documents/WeathRS-GUI/target/i686-linux-android/debug/build/serde-fda4be77bdeb96fc/out/private.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/i686-linux-android/debug/deps/libserde-14e991cb3c6f1949.rlib: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/praneeth/Documents/WeathRS-GUI/target/i686-linux-android/debug/build/serde-fda4be77bdeb96fc/out/private.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/i686-linux-android/debug/deps/libserde-14e991cb3c6f1949.rmeta: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/praneeth/Documents/WeathRS-GUI/target/i686-linux-android/debug/build/serde-fda4be77bdeb96fc/out/private.rs
+
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/Users/praneeth/Documents/WeathRS-GUI/target/i686-linux-android/debug/build/serde-fda4be77bdeb96fc/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/praneeth/Documents/WeathRS-GUI/target/i686-linux-android/debug/build/serde-fda4be77bdeb96fc/out

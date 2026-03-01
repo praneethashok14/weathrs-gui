@@ -1,0 +1,14 @@
+/Users/praneeth/Documents/WeathRS-GUI/target/x86_64-linux-android/debug/deps/thiserror-fa6e0ff0812691c7.d: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs /Users/praneeth/Documents/WeathRS-GUI/target/x86_64-linux-android/debug/build/thiserror-2988866177903495/out/private.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/x86_64-linux-android/debug/deps/libthiserror-fa6e0ff0812691c7.rlib: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs /Users/praneeth/Documents/WeathRS-GUI/target/x86_64-linux-android/debug/build/thiserror-2988866177903495/out/private.rs
+
+/Users/praneeth/Documents/WeathRS-GUI/target/x86_64-linux-android/debug/deps/libthiserror-fa6e0ff0812691c7.rmeta: /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs /Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs /Users/praneeth/Documents/WeathRS-GUI/target/x86_64-linux-android/debug/build/thiserror-2988866177903495/out/private.rs
+
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs:
+/Users/praneeth/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs:
+/Users/praneeth/Documents/WeathRS-GUI/target/x86_64-linux-android/debug/build/thiserror-2988866177903495/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/praneeth/Documents/WeathRS-GUI/target/x86_64-linux-android/debug/build/thiserror-2988866177903495/out
